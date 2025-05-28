@@ -1,0 +1,12 @@
+<svg width="1136" height="1136" viewBox="0 0 1136 1136" xmlns="http://www.w3.org/2000/svg">
+<path d="M 0.00,568.00 A 568,568 0 0,1 234.14,108.48 L 479.83,446.65 A 150,150 0 0,0 418.00,568.00 Z" fill="#ff3333" style="pointer-events: visiblePainted;" />
+<path d="M 234.14,108.48 A 568,568 0 0,1 743.52,27.80 L 614.35,425.34 A 150,150 0 0,0 479.83,446.65 Z" fill="#ff6666" style="pointer-events: visiblePainted;" />
+<path d="M 743.52,27.80 A 568,568 0 0,1 1108.20,392.48 L 710.66,521.65 A 150,150 0 0,0 614.35,425.34 Z" fill="#ff9999" style="pointer-events: visiblePainted;" />
+<path d="M 1108.20,392.48 A 568,568 0 0,1 1027.52,901.86 L 689.35,656.17 A 150,150 0 0,0 710.66,521.65 Z" fill="#ffffff" style="pointer-events: visiblePainted;" />
+<path d="M 1027.52,901.86 A 568,568 0 0,1 568.00,1136.00 L 568.00,718.00 A 150,150 0 0,0 689.35,656.17 Z" fill="#eeeeee" style="pointer-events: visiblePainted;" />
+
+  <image href="images/01.png" x="143.63" y="300.52" width="209.00" height="209.00" />
+  <image href="images/02.png" x="407.34" y="108.92" width="209.00" height="209.00" />
+  <image href="iamges/03.png" x="717.35" y="209.65" width="209.00" height="209.00" />
+  <image href="iamges/04.png" x="818.08" y="519.66" width="209.00" height="209.00" />
+</svg>
