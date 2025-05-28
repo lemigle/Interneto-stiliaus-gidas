@@ -1,0 +1,415 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #131313;
+    overflow-x: hidden;
+}
+.fonoSluoksnis {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  background-image: url('images/35.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  will-change: transform;
+}
+#logotipas {
+    animation: slideIn 1s ease-out forwards, slideRight 2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-50px); /* start position */
+    width: 100%;
+    max-width: 30%;
+    min-width: 500px;
+    height:auto;
+}
+@keyframes slideIn {
+to {
+    opacity: 1;
+    transform: translateY(0); /* end position */
+    }
+}
+@keyframes slideRight {
+    from {
+      transform: translateY(0) translateX(0);
+    }
+    to {
+      transform: translateY(0) translateX(20%);
+    }
+  }
+
+#atgal {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 10%;
+    min-width: 120px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+#atgal:hover {
+transform: scale(1.2);
+}
+iframe {
+    border: none;
+    padding: 0;
+    margin-top:40px;
+    display: block;
+    animation-iteration-count: infinite;
+  }
+
+.wrapperAnimation2 {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw; 
+}
+
+.line-combo {
+    position: relative;
+    height: 40px;
+    width: 180px;
+  }
+  
+  .h-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 50vw;
+    background: white;
+  }
+  
+  .v-line {
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    height: 80px;
+    width: 2px;
+    background: white;
+  }
+  
+  .button1 {
+    position: relative; 
+    width: 100vw;
+    height: 250px;
+    display: flex;
+  }
+  
+  #rodykle1 {
+    margin-left: 60vw;
+    height: 80%;
+    width: auto;
+  }
+  
+  #logoAtsisiusti {
+    padding-left: 20px;
+    padding-top: 150%;
+    height: auto;
+    animation: pulse 1.2s ease-in-out infinite;
+    transform-origin: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  #logoAtsisiusti:hover {
+    transform: scale(0.9);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /*horizontalaus ir vertikalaus logo stiliai*/
+  .VandHlogo {
+    display: flex;
+    width: 100vw; 
+    height: 80vh;
+  }
+  /*horizontalaus*/
+  .vandH-boxKaire {
+    flex: 1;
+    color: #000;
+    text-align: center;
+  }
+  
+  #animation4{
+    margin-top: 0 !important; /*reikia, nes ant iframe yra uzdetas 40px margin-top*/
+    padding-left: 15vh;
+    width: 536px;
+    height: 317px;
+  }
+  #horizontalus{
+    margin-left: 15%;
+    margin-bottom:0;
+  }
+  #rodykle2{
+    margin-right: 30%;
+  }
+  #logoAtsisiustiH{
+    margin-right: 25px;
+    animation: pulse 1.2s ease-in-out infinite;
+    cursor: pointer;
+  }
+  /*vertikalaus*/
+  .vandH-boxDesine {
+    flex: 1;
+  }
+  .wrapperAnimation5 {
+    display: flex;         
+    align-items: center;     
+    justify-content: center;                 
+  }
+  #vertikalus{
+    align-self: flex-start;
+    margin-top: 45px;
+    height:auto;
+    width: 40px;
+  }
+  #animation5{
+  margin-top: -15px !important; /*reikia, nes ant iframe yra uzdetas 40px margin-top*/
+  width: 305px;
+  height: 427px;
+  }
+  .stulpelisDesineje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* tarpas tarp atsisiusti icon ir rodykle */
+  }
+  #rodykle3{
+    margin-left: 0 !important;
+  }
+
+  #logoAtsisiustiV {
+    margin-top: 200px;
+    width: auto;
+    animation: pulse 1.2s ease-in-out infinite;
+    cursor: pointer;
+    margin-left: 125px;
+  }
+  /*Pavyzdziui stiliai*/
+  .pavyzdziai1TAIP {
+    display: flex;
+    width: 100vw; 
+    height: auto;
+  }
+  .pvz1Kaire{
+    position: relative;
+    flex: 60%;
+  }
+  .pvz1Desine{
+    flex: 40%;
+  }
+  .pavyzdziai2NE {
+    display: flex;
+    width: 100vw; 
+    height: auto;
+    padding: 40px;
+  }
+  #pvz{
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+
+  }
+  #pelyte {
+    position: absolute;
+    bottom: -40px; 
+    right: 70px;     
+    width: 100px;    
+    z-index: 2;      /* ensure it's on top */
+    animation: pulse 1.2s ease-in-out infinite;
+    cursor: pointer;
+  }
+  #taipIkona{
+    padding-left:40px;
+  }
+  .taipTekstas{
+    color: #E9E9E9;
+    font-family: 'Lexend';
+    font-size: 2rem;
+    padding-left: 40px;
+  }
+  .pvz2Kaire{
+    flex: 40%;
+  }
+  .pvz2Desine{
+    flex: 60%;
+    position: relative;
+  }
+  .paveikslelioVieta { /*kad kryzius ir paveikslelis butu visuomet kartu*/
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: auto;
+  }
+  .paveikslelioVieta img{
+    position: relative;
+    display: inline-block;
+    max-width: 100%; 
+    height: auto;
+  }
+  #pvz2 {
+    display: block; 
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  #kryzius {
+    position: absolute; /* kryziaus pozicija ant virsaus paveikslelio */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none; /* leidzia paspaudinams praeiti kiaurai kryziu */
+  }
+  
+  /* raudonas kryzius */
+  #neIkona{
+    display: flex;
+    justify-content: end;
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+  }
+  
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+  .neTekstas {
+    display: flex;
+    justify-content: start;
+    font-size: 2rem;
+    color: #E9E9E9;
+    font-family: 'Lexend';
+    margin-top: 30px;
+  }
+  .tusciasDivas{
+    height: 100px;
+  }
+  /* Footeris */
+  .footer {
+    width: 100%;
+    height: auto;      
+    padding: 40px 40px 35px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    height: 120px;     
+    width: auto;
+  }
+  .footer-logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  .mobile-voleliai {
+    display: none;
+  }
+
+  .tooltip {
+    position: fixed;
+    padding: 6px 12px;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Lexend';
+    font-size: 25px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+  }
+  .tooltip.show {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .wrapperAnimation4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+    }
+  
+    #animation4 {
+      display: block;
+      margin: 0 auto;
+      width: 90vw;
+      padding-left: 0 !important;
+    }
+    .VandHlogo, .pavyzdziai1TAIP, .pavyzdziai2NE {
+      flex-direction: column;
+      padding: 0;
+      
+    }
+    .pavyzdziai1TAIP{
+      padding-top: 250px;
+    }
+    .taipTekstas, .neTekstas {
+      padding: 10px 20px;
+    }
+    #logotipas{
+      animation:none;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .vandH-boxKaire,
+    .vandH-boxDesine {
+      width: 100%;
+    }
+    #rodykle3, #rodykle2, #rodykle1,#logoAtsisiusti,
+    #logoAtsisiustiV, #logoAtsisiustiH, #neIkona, #taipIkona {
+      display: none;
+    }
+    .pvz2Kaire {
+      order: 2;
+    }
+    .pvz2Desine {
+      order: 1;
+    }
+    #horizontalus{
+      margin-bottom:0;
+    }
+  }
+  @media (min-width: 1280px) {
+  .pvz1Kaire{
+    position: relative;
+    flex: 50%;
+  }
+  .pvz1Desine{
+    flex: 50%;
+  }
+  .pvz2Kaire{
+    flex: 50%;
+  }
+  .pvz2Desine{
+    flex: 50%;
+    position: relative;
+  }
+  }
+  

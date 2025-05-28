@@ -1,0 +1,355 @@
+@font-face {
+  font-family: 'RobotoBlack';
+  src: url('font/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lexend';
+  src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #131313;
+    overflow-x: hidden;
+}
+
+#atgal {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 10%;
+    min-width: 120px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+#atgal:hover {
+transform: scale(1.2);
+}
+
+#Tipografija {
+  width: 100%;
+  max-width: 30%;
+  min-width: 460px;
+}
+
+.sviesaK {
+    margin-top: 5%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.sviesaK svg {
+display: block;
+}
+
+.sviesaApacia {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  background-color: #FFF4F4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-png {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-75%, -50%);
+  width: 60vw;
+  height: auto;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.content-layout {
+  position: relative;
+  z-index: 1; 
+  display: flex;
+  gap: 50px;
+  margin-top: 15%;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*Panaikinti defaultinius nustatymus ant input */
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #FFF4F4;
+}
+.box1, .box2, .box3 {
+  width: 60vw;
+  height: 20vh;
+  background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* spalvos melyna: #215CD0  geltona: #FFD431  raudona: #FF4646
+/* Boxai kurie atsiranda, kai uzvedama ant text input ploto, taciau opacity 0 */
+.inner-box1, .inner-box2, .inner-box3 {
+  width: 20%;
+  height: 100%;
+  transform: translateY(100%); /* Start off-screen (below) */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.inner-box1{
+  background-color: #215CD0;
+}
+
+.inner-box2{
+  background-color: #FFD431;
+}
+
+.inner-box3{
+  background-color: #FFD431;
+}
+/* kai hover box1, padaryti matomuma lygu 1 innerbox */
+.box1:hover .inner-box1, .box2:hover .inner-box2, .box3:hover .inner-box3{
+  transform: translateY(0); /* slide up i pozicija */
+  opacity: 1;
+}
+
+.inner-box1 img,
+.inner-box2 img,
+.inner-box3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.fonas-png {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+.text-input {
+  flex-grow: 1;
+  height: 80%;
+  padding: 10px;
+  font-size: 2.5rem;
+  font-family: 'RobotoBlack';
+}
+.text-input2 {
+  flex-grow: 1;
+  height: 80%;
+  padding: 10px;
+  font-size: 2rem;
+  font-family: 'Lexend';
+}
+.text-input3 {
+  flex-grow: 1;
+  height: 80%;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: 'Lexend';
+  color: #ffffff;
+}
+.right-box {
+  width: 25vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-direction: column;
+}
+.right-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: block;
+}
+.right-box img:hover{
+  transform: rotate(180deg);
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-box-text {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  text-align: right;
+  font-family: 'Lexend';
+  max-width: 400px; 
+  color:#1e1e1e;
+}
+
+.top-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.top-icons img {
+  height: auto;
+  display: block;
+}
+.top-icons a{
+  min-width: 20%;
+display: inline-block
+}
+.top-icons a:hover{
+  transform: scale(0.9);
+}
+
+  
+
+#RobotoAtsisiusti, #LexendAtsisiusti, #mssAtsisiusti{
+  display: inline-block;
+  animation: pulse 1.2s ease-in-out infinite;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tooltip {
+  position: fixed;
+  padding: 6px 12px;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Lexend';
+  font-size: 1.5rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+.tooltip.show {
+  opacity: 1;
+}
+.tooltip .roboto {
+  font-family: 'RobotoBlack';
+}
+
+.tooltip .lexend {
+  font-family: 'Lexend';
+}
+
+.footer {
+  width: 100%;
+  height: auto;      
+  padding: 40px 40px 35px 0;
+  background-color: #FFF4F4;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 120px;     
+  width: auto;
+}
+.footer-logo:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .inner-box1,
+  .inner-box2,
+  .inner-box3 {
+    display: none; 
+  }
+
+  .content-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10%;
+  }
+
+  .box1, .box2, .box3 {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .text-input, .text-input2, .text-input3 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .right-box {
+    width: 90vw;
+    height: auto;
+    text-align: center;
+  }
+
+  .right-box img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .right-box-text {
+    font-size: 1.5rem;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .top-icons {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .top-icons a {
+    min-height: 50%;
+  }
+
+  .sviesaApacia {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .imageWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    z-index: 2; 
+  }
+  #tipografijosPaveikslelis {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: auto;
+    transform: none; 
+  }
+}

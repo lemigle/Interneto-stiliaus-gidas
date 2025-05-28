@@ -1,0 +1,381 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    background-color: #313131;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+#atgal {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 10%;
+    min-width: 120px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+#atgal:hover {
+    transform: scale(1.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+}
+
+.elementai{
+    display: none;
+}
+.grafiniaiElementai {
+    animation: slideIn 1s ease-out forwards, slideRight 2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-50px); /* start position */
+    width: 100%;
+    max-width: 30%;
+    min-width: 1000px;
+    height:auto;
+}
+@keyframes slideIn {
+to {
+    opacity: 1;
+    transform: translateY(0); /* end position */
+    }
+}
+@keyframes slideRight {
+    from {
+      transform: translateY(0) translateX(0);
+    }
+    to {
+      transform: translateY(0) translateX(20%);
+    }
+  }
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    flex-grow: 1;
+}
+
+.extraGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 400px;
+}
+
+.boxOne, .boxTwo, .boxThree {
+    border: 1px solid white;
+    border-left: none;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.boxTwo{
+    border-top: none;
+}
+.boxThree{
+    border-top: none;
+    border-right: none;
+}
+.boxFour{
+    border-top: none;
+    border-left: none;
+}
+
+.boxOne img {
+    max-width: 100vh;
+    height: auto;
+    animation: wiggle 1s infinite ease-in-out;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.boxTwo img {
+    max-width: 100vh;
+    height: auto;
+    animation: wiggle 1s infinite ease-in-out;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.boxOne img:hover, .boxTwo img:hover {
+    animation: none;
+    transform: scale(0.8);
+}
+
+.boxThree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 250px;
+    gap: 20px;
+    grid-row: span 2;
+}
+.topImage{
+    min-width: 30%;
+}
+/* .boxThree img {
+    max-width: 50vh;
+    height: auto;
+} */
+.boxThree img {
+    max-width: 40vw;
+    height: auto;
+}
+.boxThree #img54 {
+    min-width: 20vw;
+    padding: 40px 40px 0px 40px;
+    height: auto;
+}
+.bottomImages {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 0px 0px 40px 0px;
+}
+
+.rightImage {
+    margin-top: 105px;
+}
+
+#ikonosAtsisiusti,
+#img23,
+#img23Five {
+    animation: pulse 1.2s ease-in-out infinite;
+    transform-origin: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#ikonosAtsisiusti:hover,
+#img23:hover,
+#img23Five:hover {
+    animation: none;
+    transform: scale(0.9);
+}
+.boxFour {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    position: relative;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+.boxFourArrow{
+    margin-top: 125px;
+}
+
+.boxUpperImages {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-left: 100px; 
+}
+.textTopRight {
+    position: absolute;
+    right: 50px; 
+    top: 100px;  
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+.fonai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    width: 100%;
+}
+.fonai img {
+    max-width: 45%;
+    height: auto;
+}
+/*Desinysis div'as*/
+.boxFive {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    position: relative; 
+}
+
+.boxUpperImagesFive {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-left: 100px;
+}
+
+.textTopRightFive {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+.fonai2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.fonai2 .hover-image {
+    position: relative;
+    max-width: 45%;
+    width: 45%;
+}
+
+.fonai2 .hover-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.fonai2 .hover-image .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fonai2 .hover-image:hover .hover {
+    opacity: 1;
+}
+
+.fonai2 .hover-image:hover .base {
+    opacity: 0;
+}
+
+
+.boxFiveArrow {
+    margin-top: 125px;
+  }
+
+/* Footeris */
+.footer {
+    width: 100%;
+    height: auto;      
+    padding: 40px 40px 35px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #313131; 
+  }
+
+.footer-logo {
+    height: 120px;     
+    width: auto;
+}
+.footer-logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: fixed;
+    padding: 6px 12px;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Lexend';
+    font-size: 25px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 1024px) {
+.textTopRight,
+.textTopRightFive {
+    position: static; 
+    text-align: left; 
+    padding-left: 20px;
+}
+.grafiniaiElementai{
+    display: none;
+}
+.elementai{
+    display: block;
+    max-width: 480px;
+    padding: 2px 0px 0px 0px;
+}
+}
+
+@media (max-width: 768px) {
+.boxOne,
+.boxTwo,
+.boxThree,
+.boxFour,
+.boxFive {
+    border: none; 
+}
+
+}
+@media only screen and (max-width: 600px) {
+.mainGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: 700px;
+    padding-top: 140px;
+    gap:50px;
+}
+.extraGrid {
+    grid-template-columns: 1fr;
+    min-height: 700px;
+}
+.boxThree {
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px; 
+    text-align: center; 
+}
+.boxThree #img54{
+    max-width: 380px;
+}
+
+
+}

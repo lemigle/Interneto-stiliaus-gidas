@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'RobotoBlack';
+    src: url('font/Roboto-Black.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Lexend';
+    src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
+  }
+body {
+    margin: 0;
+    background-color: #313131;
+    background-image: url('images/66.png');
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-size: 30% auto; 
+}
+#atgal {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 10%;
+    min-width: 120px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+#atgal:hover {
+    transform: scale(1.2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: auto auto auto auto auto;
+    width: 100%;
+    height: auto;
+}
+
+.grid div {
+    color: white;
+    font-size: 1.5rem;
+}
+/*pirmasis gridas*/
+.item1 {
+    grid-column: 1 / span 2;
+    padding: 40px;
+}
+.item1 img {
+    width: auto;
+    height: 250px;
+}
+.item1-content {
+    display: flex;
+    align-items: flex-end; 
+    gap: 40px;
+  }
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%; 
+}
+.item1 p { /* tekstas*/
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Lexend';
+}
+/*antrasis gridas*/
+.item2 {
+    position: relative;  
+    border: solid white 1px; 
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; 
+}
+
+.item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item2 p {
+    position: absolute;
+    left: 40px;
+    top: 54%;
+    color: white;
+    font-size: 1em;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    max-width: 200px;
+
+}
+
+/*treciasis gridas*/
+.item3 {
+    padding: 40px;
+    border-bottom: solid white 1px;
+}
+
+.item3 p {
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Lexend';
+    padding-bottom: 40px;
+    max-width: 350px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+/*paveiksleliu css, kai ant ju paspaudziama*/
+.image-overlay-container {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.image-overlay-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.overlay-text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: 40px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    text-align: start;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-text h3 {
+    font-size: 1.4em;
+}
+
+.overlay-text p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.image-overlay-container.active img {
+    filter: brightness(20%);
+}
+
+.image-overlay-container.active .overlay-text {
+    opacity: 1;
+}
+/*Ketvirtasis gridas*/
+.item4 { 
+    grid-column: 1 / span 2;
+}
+.item4 svg {
+    padding: 40px;
+}
+/*Penktasis gridas*/
+.item5 { 
+    grid-column: 1 / span 2;
+
+}
+.item5 h1 {
+    font-family: 'RobotoBlack';
+    font-size: 3em;
+    padding-left: 40px;
+    margin: 0;
+}
+.item5 p {
+    font-family: 'Lexend';
+    font-size: 1em;
+    padding-left: 40px;
+    margin: 0; 
+}
+.item6 { 
+    grid-column: 1 / span 2; 
+    flex-direction: column;
+    gap: 40px;
+}
+.icon-with-text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    gap: 20px; /* tarpas tarp svg ir teksto */
+    font-size: 1em;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  .icon-with-text svg {
+    width: auto;
+    height: 1em;
+    flex-shrink: 0; /* uztikrinti kad svg nemazes */
+  }
+  .footer {
+    width: 100%;
+    height: auto;      
+    padding: 40px 40px 35px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    height: 120px;     
+    width: auto;
+  }
+  .footer-logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+/*formu piesimas*/
+#circle-outline {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: draw 2s ease-in-out infinite alternate;
+}
+
+#box-outline {
+    stroke-dasharray: 706;
+    stroke-dashoffset: 706;
+    animation: draw 2s ease-in-out infinite alternate;
+}
+
+#triangle-outline {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: draw 2s ease-in-out infinite alternate;
+}
+
+#diagonal-line {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: draw 2s ease-in-out infinite alternate;
+}
+
+@keyframes draw {
+to {
+    stroke-dashoffset: 0;
+}
+}
+
+@media (max-width: 768px) {
+body{
+    background-size: 70% auto; 
+}
+.grid {
+    grid-template-columns: 1fr; /* visus isdestyti stulpelyje */
+    grid-template-rows: auto;   /* eilutes automatinio dydzio */
+}
+.item1-content {
+    flex-direction: column; 
+    align-items: flex-start;    
+    }
+
+.item2 p {
+max-width: 100px;
+}
+
+.item2,
+.item3,
+.item4,
+.item5 {
+    grid-column: 1; /* pilno plocio stulpelis */
+}
+
+.item5 p{
+    padding-right: 40px;
+}
+.item5 h1{
+    font-size: 2.6em;
+}
+.overlay-text p {
+    display: none; 
+}
+.overlay-text h3 {
+    font-size: 1em;
+}
+.icon-with-text {
+    justify-content: flex-start;  
+    padding-left: 40px;           
+    padding-right: 40px;
+    padding-top: 50px;
+    }
+.icon-with-text svg {
+    display:none;
+}
+}

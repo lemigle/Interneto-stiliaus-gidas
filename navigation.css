@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  background: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+svg {
+  width: auto;
+  height: 90%;
+  overflow: visible; /* svg matomas, net kai padidėja už savo viebox ribų */
+}
+
+/* Segmentų atsiradimo animacija */
+@keyframes segmentIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.donut-segment {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: segmentIn 0.5s forwards;
+}
+
+/* segmentų atsiradimo delay nurodymas */
+.donut-segment-wrapper:nth-child(1) .donut-segment { animation-delay: 0.4s; }
+.donut-segment-wrapper:nth-child(2) .donut-segment { animation-delay: 0.3s; }
+.donut-segment-wrapper:nth-child(3) .donut-segment { animation-delay: 0.2s; }
+.donut-segment-wrapper:nth-child(4) .donut-segment { animation-delay: 0.1s; }
+.donut-segment-wrapper:nth-child(5) .donut-segment { animation-delay: 0s; }
+
+/* Segmentų išnykimo animacija */
+@keyframes segmentOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+.segment-out {
+  animation: segmentOut 0.4s forwards;
+}
+
+/* segmentų išnykimo delay nurodymas */
+.donut-segment-wrapper:nth-child(1) .segment-out { animation-delay: 0s; }
+.donut-segment-wrapper:nth-child(2) .segment-out { animation-delay: 0.1s; }
+.donut-segment-wrapper:nth-child(3) .segment-out { animation-delay: 0.2s; }
+.donut-segment-wrapper:nth-child(4) .segment-out { animation-delay: 0.3s; }
+.donut-segment-wrapper:nth-child(5) .segment-out { animation-delay: 0.4s; }
+
+/* paveikslėlių atsiradimo animacija */
+@keyframes imageIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.segment-image {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: imageIn 0.5s forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* paveikslėlis matomas po animacijos */
+.segment-image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* paveiksėlio išnykimo animacija */
+.segment-image.out {
+  animation: segmentOut 0.4s forwards;
+}
+
+/* interaktyvumas ir transformacija */
+.donut-segment-wrapper,
+.segment-image-wrapper {
+  transition: fill 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+/* Logo pozicija */
+.Logo {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.Logo svg {
+  width: 200px;
+  height: auto;
+}
+
+#trikampis {
+  cursor: pointer;
+}
+
+#juosta {
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  svg {
+    width: auto;
+    height: 60%;
+  }
+  .Logo svg {
+    width: 130px;
+    height: auto;
+  }
+  .Logo{
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+

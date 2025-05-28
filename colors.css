@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MiglesSSriftas';
+  src: url('font/MiglesSSriftas-Regular.ttf') format('truetype');
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #131313;
+}
+
+#atgal {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  width: 10%;
+  min-width: 120px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+#atgal:hover {
+  transform: scale(1.2);
+}
+.wrapper {
+  position: relative;
+  background-color: antiquewhite;
+}
+#colors1 {
+  position: absolute;
+  bottom: 10%;      
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: auto;
+}
+/* Atkomentuoti, kitas variantas*/
+/* #koloritas {
+  position: absolute;
+  top: 80%;
+  left: 20.06%;
+  height: auto;
+}  */
+
+#koloritas {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-50px); /* start position */
+  width: 100%;
+  max-width: 30%;
+  min-width: 500px;
+}
+
+@keyframes slideIn {
+to {
+  opacity: 1;
+  transform: translateY(0); /* end position */
+  }
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.W {
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.Y {
+  margin-left: 7%; 
+  cursor: pointer;
+}
+.B {
+  margin-left: 7%; 
+  cursor: pointer;
+}
+
+.R {
+  margin-left: 20.3%;
+  cursor: pointer;
+}
+
+.BL {
+  margin-left: 3%;
+  cursor: pointer;
+}
+
+#Rvuoliukostaciakampis_W {
+  transition: height 5.0s ease-out;
+}
+
+#Rvuoliukas_W {
+  transition: transform 5.0s ease-out;
+}
+
+#Rvuoliukostaciakampis_Y {
+  transition: height 6.0s ease-out;
+}
+
+#Rvuoliukas_Y {
+  transition: transform 6.0s ease-out;
+}
+
+#Rvuoliukostaciakampis_B {
+  transition: height 5.0s ease-out;
+}
+
+#Rvuoliukas_B {
+  transition: transform 5.0s ease-out;
+}
+
+#Rvuoliukostaciakampis_R {
+  transition: height 5.0s ease-out;
+}
+
+#Rvuoliukas_R {
+  transition: transform 5.0s ease-out;
+}
+
+#Rvuoliukostaciakampis_BL {
+  transition: height 5.0s ease-out;
+}
+
+#Rvuoliukas_BL {
+  transition: transform 5.0s ease-out;
+}
+
+.tooltip {
+  position: fixed;
+  padding: 6px 12px;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Lexend';
+  font-size: 25px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+.colors1-tooltip {
+  font-family: 'Lexend', sans-serif !important;
+  font-size: 20px !important;
+  letter-spacing: 0.5px;
+}
+
+
+.custom-toast {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #222;
+  color: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  font-family: 'Lexend';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  z-index: 10000;
+}
+.custom-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer {
+  width: 100%;
+  height: auto;      
+  padding: 40px 40px 35px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 120px;     
+  width: auto;
+}
+.footer-logo:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.mobile-voleliai {
+  display: none;
+}
+
+/* show mobile voleliai, hide voleliai and staciakampiai */
+@media only screen and (max-width: 768px) {
+  .columns {
+    display: none;
+  }
+
+  .mobile-voleliai {
+    display: block;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .mobile-voleliai:hover {
+    cursor: pointer;
+  }
+  .mobile-voleliai svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #colors1 {
+    width: 80% !important;  
+    max-width: none;
+    height: auto;
+  }
+  .wrapper .colors {
+    margin-bottom: 300px;
+  }
+}
+

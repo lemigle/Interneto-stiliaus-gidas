@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('font/Lexend-VariableFont_wght.ttf') format('truetype');
+  }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    background-color: #282828; 
+}
+
+.Logo svg {
+    width: 200px;
+    height: auto;
+}
+.Logo {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#trikampis {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#juosta {
+    transition: transform 0.3s ease; 
+}
+.informacija {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  .informacija:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Info box */
+  .informacijosLaukas {
+    position: fixed;
+    bottom: 20px;
+    right: 80px; 
+    color: #D9D9D9;
+    border: 2px solid #D9D9D9;
+    padding: 16px;
+    max-width: 300px;
+    font-family: 'Lexend';
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+  
+  /* rodyti informacijos lauka, kai infotoggle yra checked*/
+  #infoToggle:checked + label + .informacijosLaukas {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @media (max-width: 768px) {
+    .Logo svg {
+      width: 130px;
+      height: auto;
+    }
+    .Logo{
+      top: 54%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
